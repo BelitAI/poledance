@@ -1,0 +1,30 @@
+{
+  "name": "poledance",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Aplicación para consultar un catálogo de figuras de pole dance y registrar el progreso personal de cada usuaria.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BelitAI/poledance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BelitAI/poledance/issues"
+  },
+  "homepage": "https://github.com/BelitAI/poledance#readme",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.11"
+  }
+}
