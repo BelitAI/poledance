@@ -67,3 +67,16 @@ test("un paso sin texto no es válido", async () => {
         },
     });
 });
+
+test("una figura puede tener descripción e imagen principal", () => {
+    const figura = new Figura({
+        nombre: "Fireman",
+        nivel: "principiante",
+        descripcion: "Un giro alrededor de la barra",
+        imagenUrl: "https://ejemplo.com/fireman.jpg",
+        pasos: [{ texto: "Primer paso" }],
+    });
+
+    expect(figura.descripcion).toBe("Un giro alrededor de la barra");
+    expect(figura.imagenUrl).toBe("https://ejemplo.com/fireman.jpg");
+});

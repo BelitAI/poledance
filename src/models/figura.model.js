@@ -28,6 +28,9 @@ const figuraSchema = new mongoose.Schema({
             message: "La figura debe tener al menos un paso",
         },
     },
+
+    descripcion: String,
+    imagenUrl: String,
 });
 
 const Figura = mongoose.model("Figura", figuraSchema);
