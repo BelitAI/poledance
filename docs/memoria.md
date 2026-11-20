@@ -39,8 +39,22 @@ README.
 
 ## 6. Testing
 
-Jest está configurado. Las pruebas unitarias están pendientes de
-implementación y se escribirán antes de la lógica correspondiente.
+Jest está configurado. Se han añadido pruebas para las validaciones
+del modelo de figura y se seguirá ampliando la cobertura durante el
+desarrollo.
+
+Para desarrollar algunas validaciones del modelo de figura se ha
+seguido el ciclo TDD: primero se escribió una prueba que fallaba,
+después se añadió la regla para que pasara y se volvió a ejecutar
+el conjunto de pruebas.
+
+Por ejemplo, se comprobó que una figura con un nivel no permitido
+se rechazara. El test falló inicialmente porque el modelo aún no
+definía esa regla. Después se añadieron los niveles permitidos y la
+prueba pasó.
+
+Las pruebas del modelo se ejecutan sin conexión a MongoDB. Quedan
+pendientes los tests de autorización y de lógica propia.
 
 ## 7. Retos y soluciones
 
