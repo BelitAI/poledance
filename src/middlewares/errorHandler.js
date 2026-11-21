@@ -5,8 +5,8 @@ export const errorHandler = (error, req, res, next) => {
         });
     }
 
-    if (error.statusCode === 400) {
-        return res.status(400).json({
+    if (error.statusCode === 400 || error.statusCode === 401) {
+        return res.status(error.statusCode).json({
             error: error.message,
         });
     }
