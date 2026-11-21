@@ -3,5 +3,9 @@
 // le pasaremos el modelo real Figura.
 
 export const obtenerFiguras = async (modelo) => {
-  return await modelo.find();
+    return await modelo.find();
+};
+
+export const crearFigura = async (modelo, datos) => {
+    return await modelo.create(datos);
 };
