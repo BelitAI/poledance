@@ -34,3 +34,21 @@ test("responde con 400 cuando el servicio indica datos incorrectos", () => {
         error: "La contraseña es obligatoria",
     });
 });
+
+test("responde con 409 si el email ya está registrado", () => {
+    const error = new Error("Clave duplicada");
+    error.code = 11000;
+    error.keyPattern = { email: 1 };
+
+    const res = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn(),
+    };
+
+    errorHandler(error, {}, res, jest.fn());
+
+    expect(res.status).toHaveBeenCalledWith(409);
+    expect(res.json).toHaveBeenCalledWith({
+        error: "El email ya está registrado",
+    });
+});

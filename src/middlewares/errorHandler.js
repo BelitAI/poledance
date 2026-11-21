@@ -11,6 +11,12 @@ export const errorHandler = (error, req, res, next) => {
         });
     }
 
+    if (error.code === 11000 && error.keyPattern?.email) {
+        return res.status(409).json({
+            error: "El email ya está registrado",
+        });
+    }
+
     return res.status(500).json({
         error: "Error interno del servidor",
     });
