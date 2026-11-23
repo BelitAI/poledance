@@ -3,6 +3,7 @@
 import express from "express";
 import figuraRouter from "./routes/figura.routes.js";
 import { errorHandler } from "./middlewares/errorHandler.js";
+import authRouter from "./routes/auth.routes.js";
 
 const app = express();
 app.use(express.json());
@@ -12,5 +13,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/figuras", figuraRouter);
+app.use("/auth", authRouter);
 app.use(errorHandler);
 export default app;

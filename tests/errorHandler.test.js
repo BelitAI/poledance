@@ -17,3 +17,55 @@ test("responde con 400 ante un error de validación", () => {
         error: "Datos no válidos",
     });
 });
+
+test("responde con 400 cuando el servicio indica datos incorrectos", () => {
+    const error = new Error("La contraseña es obligatoria");
+    error.statusCode = 400;
+
+    const res = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn(),
+    };
+
+    errorHandler(error, {}, res, jest.fn());
+
+    expect(res.status).toHaveBeenCalledWith(400);
+    expect(res.json).toHaveBeenCalledWith({
+        error: "La contraseña es obligatoria",
+    });
+});
+
+test("responde con 409 si el email ya está registrado", () => {
+    const error = new Error("Clave duplicada");
+    error.code = 11000;
+    error.keyPattern = { email: 1 };
+
+    const res = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn(),
+    };
+
+    errorHandler(error, {}, res, jest.fn());
+
+    expect(res.status).toHaveBeenCalledWith(409);
+    expect(res.json).toHaveBeenCalledWith({
+        error: "El email ya está registrado",
+    });
+});
+
+test("responde con 401 ante credenciales incorrectas", () => {
+    const error = new Error("Credenciales incorrectas");
+    error.statusCode = 401;
+
+    const res = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn(),
+    };
+
+    errorHandler(error, {}, res, jest.fn());
+
+    expect(res.status).toHaveBeenCalledWith(401);
+    expect(res.json).toHaveBeenCalledWith({
+        error: "Credenciales incorrectas",
+    });
+});
