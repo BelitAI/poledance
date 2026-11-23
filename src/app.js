@@ -5,6 +5,7 @@ import figuraRouter from "./routes/figura.routes.js";
 import { errorHandler } from "./middlewares/errorHandler.js";
 import authRouter from "./routes/auth.routes.js";
 import progresoRouter from "./routes/progreso.routes.js";
+import usuariaRouter from "./routes/usuaria.routes.js";
 
 const app = express();
 app.use(express.json());
@@ -16,5 +17,6 @@ app.get("/", (req, res) => {
 app.use("/figuras", figuraRouter);
 app.use("/auth", authRouter);
 app.use("/progresos", progresoRouter);
+app.use("/usuarias", usuariaRouter);
 app.use(errorHandler);
 export default app;

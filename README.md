@@ -103,8 +103,8 @@ catálogo y tener su propio estado.
 
 | Rol | Permisos |
 | --- | --- |
-| `user` | Consultar el catálogo y gestionar sus propios progresos. |
-| `admin` | Gestionar el catálogo y los progresos de cualquier usuaria. |
+| `user` | Consultar el catálogo, gestionar sus propios progresos y eliminar su propia cuenta. |
+| `admin` | Gestionar el catálogo, modificar los progresos de cualquier usuaria y eliminar cuentas. |
 
 El registro público creará cuentas con el rol `user`. La API no
 permitirá elegir el rol `admin` durante el registro.
@@ -128,13 +128,26 @@ Un endpoint es una combinación de método HTTP y ruta que permite realizar una 
 | `POST` | `/auth/login` | Iniciar sesión | Público | No |
 | `GET` | `/figuras` | Consultar el catálogo | Público | No |
 | `POST` | `/figuras` | Añadir una figura | Administradora | Sí |
+| `PATCH` | `/figuras/:figuraId` | Editar una figura | Administradora | Sí |
+| `DELETE` | `/figuras/:figuraId` | Eliminar una figura sin progresos asociados | Administradora | Sí |
 | `GET` | `/progresos` | Consultar mi seguimiento | Usuaria autenticada | No |
 | `POST` | `/progresos` | Empezar a intentar una figura | Usuaria autenticada | Sí |
 | `PATCH` | `/progresos/:id` | Actualizar el estado de un progreso | Propietaria o administradora | Sí |
+| `DELETE` | `/usuarias/:usuariaId` | Eliminar una cuenta y sus progresos | Propietaria o administradora | Sí |
 
 En `/progresos/:id`, `:id` representa el identificador del progreso
 que queremos actualizar. La API comprobará que el progreso pertenece
 a la usuaria autenticada, salvo que tenga el rol `admin`.
+
+En `/usuarias/:usuariaId`, `:usuariaId` representa la cuenta que se
+quiere eliminar. Una usuaria puede eliminar su propia cuenta y una
+administradora puede eliminar cualquier cuenta. Al eliminarla, también
+se eliminan sus progresos; las figuras del catálogo se conservan.
+
+Actualmente, el borrado de los progresos y el de la cuenta se realizan
+en dos operaciones separadas. Si la segunda falla, podrían eliminarse
+los progresos y conservarse la cuenta. Queda pendiente estudiar el uso
+de transacciones para realizar ambas operaciones de forma conjunta.
 
 ## Plan de trabajo
 
