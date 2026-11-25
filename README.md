@@ -26,27 +26,29 @@ variables de entorno.
   Al ejecutar la API en el ordenador, pueden ser `localhost` y `27017`.
 - `MONGO_AUTH_SOURCE`: base de datos de autenticación; en esta
   configuración se usa `admin`.
-- `MONGO_EXPRESS_USER` y `MONGO_EXPRESS_PASSWORD`: credenciales
-  para acceder a Mongo Express.
-- `MONGO_PASSWORD_URI`: contraseña de MongoDB codificada para
-  incluirla en la dirección de conexión de Mongo Express.
 - `JWT_SECRET`: clave secreta usada para firmar y verificar tokens.
 
 ## Arrancar el proyecto
 
-Arrancar MongoDB y Mongo Express:
+Con Docker en marcha, ejecuta este comando desde la carpeta del proyecto:
 
 ```bash
-docker compose up -d
+docker compose up --build -d
 ```
 
-Arrancar la API:
+Este comando construye la imagen de la API y arranca los contenedores de la API y MongoDB.
 
-```bash
-npm run dev
-```
+Si modificas el código de la API, vuelve a ejecutar el mismo comando para reconstruir la imagen y aplicar los cambios.
 
 La API estará disponible en `http://localhost:3001`.
+
+Para detener los contenedores:
+
+```bash
+docker compose stop
+```
+
+Los datos de MongoDB se conservan en un volumen de Docker.
 
 ## Tests
 
@@ -56,7 +58,7 @@ Para ejecutar las pruebas:
 npm test
 ```
 
-## Objetivo de la primera fase
+## ## Objetivo del proyecto
 
 Construir una API de backend con registro, inicio de sesión y permisos. Cada usuaria podrá consultar las figuras y registrar cuáles está intentando y cuáles ha conseguido.
 
@@ -73,7 +75,7 @@ El proyecto incluye pruebas unitarias y continúa en desarrollo.
 - **MongoDB:** guardar los datos en documentos.
 - **Mongoose:** definir los modelos y las validaciones y trabajar con MongoDB desde JavaScript.
 - **Jest:** ejecutar pruebas unitarias.
-- **Docker Compose:** arrancar MongoDB y Mongo Express en contenedores.
+- **Docker Compose:** arrancar la API y MongoDB en contenedores.
 
 ## Modelo de datos
 
