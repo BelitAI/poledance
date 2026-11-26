@@ -9,6 +9,7 @@ import usuariaRouter from "./routes/usuaria.routes.js";
 
 const app = express();
 app.use(express.json());
+app.use("/imagenes", express.static("imagenes"));
 
 app.get("/", (req, res) => {
   res.send("¡Bienvenida a la API de Pole Dance!");
