@@ -2,8 +2,10 @@
 // En el test le pasamos el modelo simulado; cuando conectemos la ruta, 
 // le pasaremos el modelo real Figura.
 
-export const obtenerFiguras = async (modelo) => {
-    return await modelo.find();
+export const obtenerFiguras = async (modelo, nivel) => {
+    const filtro = nivel ? { nivel } : {};
+
+    return await modelo.find(filtro);
 };
 
 export const crearFigura = async (modelo, datos) => {
