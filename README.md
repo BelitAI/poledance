@@ -50,6 +50,15 @@ docker compose stop
 
 Los datos de MongoDB se conservan en un volumen de Docker.
 
+## Documentación de la API
+
+Con la aplicación en marcha, la documentación interactiva de Swagger está disponible en:
+
+http://localhost:3001/docs
+
+Desde esta página se pueden consultar y probar las rutas de la API.
+Para las rutas protegidas, inicia sesión y añade el token mediante el botón **Authorize**.
+
 ## Tests
 
 Para ejecutar las pruebas:
@@ -58,15 +67,17 @@ Para ejecutar las pruebas:
 npm test
 ```
 
-## ## Objetivo del proyecto
+## Objetivo del proyecto
 
-Construir una API de backend con registro, inicio de sesión y permisos. Cada usuaria podrá consultar las figuras y registrar cuáles está intentando y cuáles ha conseguido.
+El objetivo del proyecto es desarrollar una API que permita consultar un
+catálogo de figuras de pole dance y registrar el progreso personal de cada
+usuaria.
 
-La API tendrá al menos tres entidades, con un mínimo de dos colecciones en MongoDB. Además del registro y el login, contará con al menos tres endpoints funcionales, dos de los cuales modificarán la base de datos.
+La API incluye registro e inicio de sesión, gestión de permisos y tres
+entidades: usuarias, figuras y progresos. Las usuarias pueden consultar el
+catálogo y registrar qué figuras están practicando o han conseguido.
 
-El servidor, la conexión a MongoDB, la autenticación y las rutas
-principales del catálogo y del progreso personal ya están implementados.
-El proyecto incluye pruebas unitarias y continúa en desarrollo.
+El proyecto incluye pruebas unitarias y documentación interactiva con Swagger.
 
 ## Tecnologías
 
@@ -79,7 +90,7 @@ El proyecto incluye pruebas unitarias y continúa en desarrollo.
 
 ## Modelo de datos
 
-La aplicación tendrá tres entidades: usuarias, figuras y progresos.
+La aplicación tiene tres entidades: usuarias, figuras y progresos.
 
 | Entidad | Qué guarda | Datos iniciales |
 | --- | --- | --- |
@@ -89,13 +100,13 @@ La aplicación tendrá tres entidades: usuarias, figuras y progresos.
 
 ### Organización en MongoDB
 
-- Las usuarias se guardarán en una colección.
-- Las figuras se guardarán en otra colección, compartida por todas las usuarias.
+- Las usuarias se guardan en una colección.
+- Las figuras se guardan en otra colección, compartida por todas las usuarias.
 - Los progresos se guardan en una colección propia. Cada progreso tiene una referencia a la usuaria y otra a la figura del catálogo.
 - El estado de un progreso puede ser `practicando` o `lograda`.
-- Una usuaria tendrá como máximo un progreso por figura.
-- Cada cuenta tendrá un email único.
-- La contraseña se guardará como un hash y no se devolverá en las respuestas.
+- Una usuaria tiene como máximo un progreso por figura.
+- Cada cuenta tiene un email único.
+- La contraseña se guarda como un hash y no se devuelve en las respuestas.
 
 Por ejemplo, Ana puede tener un progreso de Fireman con estado
 `practicando`. Otra usuaria puede referenciar la misma figura del
@@ -108,17 +119,18 @@ catálogo y tener su propio estado.
 | `user` | Consultar el catálogo, gestionar sus propios progresos y eliminar su propia cuenta. |
 | `admin` | Gestionar el catálogo, modificar los progresos de cualquier usuaria y eliminar cuentas. |
 
-El registro público creará cuentas con el rol `user`. La API no
-permitirá elegir el rol `admin` durante el registro.
+El registro público crea cuentas con el rol `user`. No permite elegir el
+rol `admin` durante el registro.
 
-Las rutas protegidas requerirán autenticación mediante JWT. Un
-middleware comprobará el rol para restringir al menos una ruta a
-administradoras. Cada usuaria puede modificar el estado de sus propios progresos.
-Una administradora puede modificar el estado de los progresos de
-cualquier usuaria.
+Las rutas protegidas requieren autenticación mediante JWT. Las operaciones
+de creación, edición y eliminación de figuras requieren el rol `admin`.
 
-Las contraseñas se protegerán mediante bcrypt y no se devolverán
-en las respuestas de la API.
+Cada usuaria puede modificar el estado de sus propios progresos. Una
+administradora puede modificar el estado de los progresos de cualquier
+usuaria.
+
+Las contraseñas se protegen mediante bcrypt y no se devuelven en las
+respuestas de la API.
 
 ## Endpoints
 
@@ -134,11 +146,11 @@ Un endpoint es una combinación de método HTTP y ruta que permite realizar una 
 | `DELETE` | `/figuras/:figuraId` | Eliminar una figura sin progresos asociados | Administradora | Sí |
 | `GET` | `/progresos` | Consultar mi seguimiento | Usuaria autenticada | No |
 | `POST` | `/progresos` | Empezar a intentar una figura | Usuaria autenticada | Sí |
-| `PATCH` | `/progresos/:id` | Actualizar el estado de un progreso | Propietaria o administradora | Sí |
+| `PATCH` | `/progresos/:progresoId` | Actualizar el estado de un progreso | Propietaria o administradora | Sí |
 | `DELETE` | `/usuarias/:usuariaId` | Eliminar una cuenta y sus progresos | Propietaria o administradora | Sí |
 
-En `/progresos/:id`, `:id` representa el identificador del progreso
-que queremos actualizar. La API comprobará que el progreso pertenece
+En `/progresos/:progresoId`, `:progresoId` representa el identificador del progreso
+que queremos actualizar. La API comprueba que el progreso pertenece
 a la usuaria autenticada, salvo que tenga el rol `admin`.
 
 En `/usuarias/:usuariaId`, `:usuariaId` representa la cuenta que se
@@ -166,6 +178,3 @@ de transacciones para realizar ambas operaciones de forma conjunta.
 9. Comprobar los endpoints y documentar la instalación, las variables de
    entorno, el arranque y la ejecución de los tests.
 10. Preparar la memoria del proyecto.
-
-El desarrollo se hará paso a paso, explicando cada cambio antes de implementarlo.
-
