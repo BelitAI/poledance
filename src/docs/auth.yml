@@ -1,0 +1,72 @@
+paths:
+  /auth/login:
+
+    # Inicia sesión y devuelve un token.
+    post:
+      tags:
+        - Auth
+      summary: Iniciar sesión
+      description: Comprueba las credenciales y devuelve los datos de la usuaria y un token.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: usuaria@ejemplo.com
+                password:
+                  type: string
+                  format: password
+                  example: contraseña-de-ejemplo
+      responses:
+        "200":
+          description: Sesión iniciada correctamente. Devuelve la usuaria y el token.
+        "400":
+          description: El email o la contraseña no se han proporcionado.
+        "401":
+          description: Credenciales incorrectas.
+
+  /auth/registro:
+
+    # Registra una usuaria con el rol user.
+    post:
+      tags:
+        - Auth
+      summary: Registrar una usuaria
+      description: Crea una cuenta de usuaria.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - nombre
+                - email
+                - password
+              properties:
+                nombre:
+                  type: string
+                  example: Ana
+                email:
+                  type: string
+                  format: email
+                  example: ana@ejemplo.com
+                password:
+                  type: string
+                  format: password
+                  example: contraseña-de-ejemplo
+      responses:
+        "201":
+          description: Usuaria registrada correctamente.
+        "400":
+          description: Datos no válidos.
+        "409":
+          description: El email ya está registrado.

@@ -1,0 +1,85 @@
+paths:
+  /progresos:
+
+    # Consulta los progresos de la usuaria autenticada.
+    get:
+      tags:
+        - Progresos
+      summary: Consultar mis progresos
+      description: Devuelve los progresos de la usuaria identificada por el token.
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Lista de progresos obtenida correctamente.
+
+    # Inicia el progreso de una usuaria para una figura.
+    post:
+      tags:
+        - Progresos
+      summary: Iniciar un progreso
+      description: Crea un progreso para la usuaria autenticada y la figura indicada.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - figuraId
+              properties:
+                figuraId:
+                  type: string
+                  description: Identificador de la figura.
+                  example: "6b017cb232f922ac11dfbc86"
+      responses:
+        "201":
+          description: Progreso creado correctamente.
+        "400":
+          description: Identificador de figura no válido.
+        "404":
+          description: Figura no encontrada.
+        "409":
+          description: Ya existe un progreso para esta usuaria y figura.
+
+  /progresos/{progresoId}:
+
+    # Cambia el estado de un progreso existente.
+    patch:
+      tags:
+        - Progresos
+      summary: Actualizar el estado de un progreso
+      description: Cambia el estado a practicando o lograda.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: progresoId
+          required: true
+          description: Identificador del progreso que se quiere actualizar.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - estado
+              properties:
+                estado:
+                  type: string
+                  enum:
+                    - practicando
+                    - lograda
+                  example: lograda
+      responses:
+        "200":
+          description: Progreso actualizado correctamente.
+        "400":
+          description: Identificador o estado no válido.
+        "404":
+          description: Progreso no encontrado.

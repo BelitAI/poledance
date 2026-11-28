@@ -1,0 +1,159 @@
+paths:
+  /figuras: 
+
+    # Consulta pública del catálogo, con filtro opcional por nivel.
+    get:
+      tags:
+        - Figuras
+      summary: Consultar el catálogo de figuras
+      description: Devuelve las figuras. También permite filtrarlas por nivel.
+      parameters:
+        - in: query
+          name: nivel
+          required: false
+          description: Nivel de las figuras que se quieren consultar.
+          schema:
+            type: string
+            enum:
+              - principiante
+              - intermedio
+              - avanzado
+              - élite
+      responses:
+        "200":
+          description: Lista de figuras obtenida correctamente.
+   
+    # Crea una figura; requiere token de administradora.
+    post:
+      tags:
+        - Figuras
+      summary: Crear una figura
+      description: Crea una figura. Solo pueden hacerlo las administradoras.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - nombre
+                - nivel
+                - pasos
+              properties:
+                nombre:
+                  type: string
+                  example: Figura de ejemplo
+                nivel:
+                  type: string
+                  enum:
+                    - principiante
+                    - intermedio
+                    - avanzado
+                    - élite
+                descripcion:
+                  type: string
+                  example: Descripción de la figura.
+                imagenUrl:
+                  type: string
+                  example: /imagenes/ejemplo.png
+                pasos:
+                  type: array
+                  minItems: 1
+                  items:
+                    type: object
+                    required:
+                      - texto
+                    properties:
+                      texto:
+                        type: string
+                        example: Descripción del primer paso.
+                      imagenUrl:
+                        type: string
+                        example: /imagenes/ejemplo-paso1.png
+      responses:
+        "201":
+          description: Figura creada correctamente.
+        "400":
+          description: Datos no válidos.
+  /figuras/{figuraId}:
+
+    # Actualiza los campos enviados de una figura.
+    patch:
+      tags:
+        - Figuras
+      summary: Editar una figura
+      description: Actualiza los campos enviados. Solo pueden hacerlo las administradoras.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: figuraId
+          required: true
+          description: Identificador de la figura que se quiere editar.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                nivel:
+                  type: string
+                  enum:
+                    - principiante
+                    - intermedio
+                    - avanzado
+                    - élite
+                descripcion:
+                  type: string
+                imagenUrl:
+                  type: string
+                pasos:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - texto
+                    properties:
+                      texto:
+                        type: string
+                      imagenUrl:
+                        type: string
+            example:
+              nombre: Nuevo nombre
+      responses:
+        "200":
+          description: Figura actualizada correctamente.
+        "400":
+          description: Identificador o datos no válidos.
+        "404":
+          description: Figura no encontrada.
+
+    # Elimina una figura por su identificador.
+    delete:
+      tags:
+        - Figuras
+      summary: Eliminar una figura
+      description: Elimina una figura. Solo pueden hacerlo las administradoras.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: figuraId
+          required: true
+          description: Identificador de la figura que se quiere eliminar.
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Figura eliminada correctamente.
+        "400":
+          description: Identificador no válido.
+        "404":
+          description: Figura no encontrada.

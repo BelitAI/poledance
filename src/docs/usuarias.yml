@@ -1,0 +1,27 @@
+paths:
+  /usuarias/{usuariaId}:
+
+    # Elimina una cuenta y sus progresos asociados.
+    delete:
+      tags:
+        - Usuarias
+      summary: Eliminar una cuenta
+      description: Una usuaria puede eliminar su propia cuenta. Una administradora puede eliminar cualquier cuenta. También se eliminan los progresos asociados.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: usuariaId
+          required: true
+          description: Identificador de la cuenta que se quiere eliminar.
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Cuenta y progresos eliminados.
+        "400":
+          description: Identificador de usuaria no válido.
+        "403":
+          description: No tienes permiso para eliminar esta cuenta.
+        "404":
+          description: Usuaria no encontrada.
