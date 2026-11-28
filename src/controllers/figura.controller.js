@@ -10,7 +10,15 @@ import {
 
 export const listarFiguras = async (req, res, next) => {
     try {
-        const figuras = await obtenerFiguras(Figura);
+        const { nivel } = req.query;
+        const nivelesPermitidos = ["principiante", "intermedio", "avanzado", "élite"];
+
+        if (nivel !== undefined && !nivelesPermitidos.includes(nivel)) {
+            const error = new Error("El nivel indicado no es válido");
+            error.statusCode = 400;
+            throw error;
+        }
+        const figuras = await obtenerFiguras(Figura, nivel);
         res.status(200).json(figuras);
     } catch (error) {
         next(error);

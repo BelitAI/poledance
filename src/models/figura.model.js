@@ -12,6 +12,9 @@ const figuraSchema = new mongoose.Schema({
         enum: ["principiante", "intermedio", "avanzado", "élite"],
     },
 
+    descripcion: String,
+    imagenUrl: String,
+
     pasos: {
         type: [
             {
@@ -29,8 +32,6 @@ const figuraSchema = new mongoose.Schema({
         },
     },
 
-    descripcion: String,
-    imagenUrl: String,
 });
 
 const Figura = mongoose.model("Figura", figuraSchema);

@@ -4,7 +4,7 @@
 		"name": "Pole Dance",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "60375160",
-		"_collection_link": "https://belit3-4432204.postman.co/workspace/Belit's-Workspace~4f0efcca-84c2-4bf3-8578-6d5e937289ed/collection/60375160-6f842e54-46aa-4ee8-997b-8f27af20d538?action=share&source=collection_link&creator=60375160"
+		"_collection_link": "https://belit3-4432204.postman.co/workspace/4f0efcca-84c2-4bf3-8578-6d5e937289ed/collection/60375160-6f842e54-46aa-4ee8-997b-8f27af20d538?action=share&source=collection_link&creator=60375160"
 	},
 	"item": [
 		{
@@ -21,6 +21,106 @@
 					"port": "3001",
 					"path": [
 						"figuras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar figuras principiante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/figuras?nivel=principiante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"figuras"
+					],
+					"query": [
+						{
+							"key": "nivel",
+							"value": "principiante"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar figuras intermedio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/figuras?nivel=intermedio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"figuras"
+					],
+					"query": [
+						{
+							"key": "nivel",
+							"value": "intermedio"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar figuras avanzado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/figuras?nivel=avanzado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"figuras"
+					],
+					"query": [
+						{
+							"key": "nivel",
+							"value": "avanzado"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar figuras élite",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/figuras?nivel=élite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"figuras"
+					],
+					"query": [
+						{
+							"key": "nivel",
+							"value": "élite"
+						}
 					]
 				}
 			},
@@ -130,7 +230,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"nombre\": \"\",\n  \"nivel\": \"principiante\",\n  \"pasos\": [\n    {\n      \"texto\": \"\"\n    }\n  ]\n}",
+					"raw": "{\n  \"nombre\": \"\",\n  \"nivel\": \"principiante\",\n  \"descripcion\": \"\",\n  \"imagenUrl\": \"\",\n  \"pasos\": [\n    {\n      \"texto\": \"\",\n      \"imagenUrl\": \"\"\n    },\n    {\n      \"texto\": \"\",\n      \"imagenUrl\": \"\"\n    }\n  ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -168,7 +268,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"nombre\": \"\",\n  \"nivel\": \"intermedio\",\n  \"pasos\": [\n    {\n      \"texto\": \"\"\n    }\n  ]\n}",
+					"raw": "{\n  \"nombre\": \"\",\n  \"nivel\": \"intermedio\",\n  \"descripcion\": \"\",\n  \"imagenUrl\": \"\",\n  \"pasos\": [\n    {\n      \"texto\": \"\",\n      \"imagenUrl\": \"\"\n    },\n    {\n      \"texto\": \"\",\n      \"imagenUrl\": \"\"\n    }\n  ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -206,7 +306,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"nombre\": \"\",\n  \"nivel\": \"avanzado\",\n  \"pasos\": [\n    {\n      \"texto\": \"\"\n    }\n  ]\n}",
+					"raw": "{\n  \"nombre\": \"\",\n  \"nivel\": \"avanzado\",\n  \"descripcion\": \"\",\n  \"imagenUrl\": \"\",\n  \"pasos\": [\n    {\n      \"texto\": \"\",\n      \"imagenUrl\": \"\"\n    },\n    {\n      \"texto\": \"\",\n      \"imagenUrl\": \"\"\n    }\n  ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -244,7 +344,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"nombre\": \"\",\n  \"nivel\": \"élite\",\n  \"pasos\": [\n    {\n      \"texto\": \"\"\n    }\n  ]\n}",
+					"raw": "{\n  \"nombre\": \"\",\n  \"nivel\": \"élite\",\n  \"descripcion\": \"\",\n  \"imagenUrl\": \"\",\n  \"pasos\": [\n    {\n      \"texto\": \"\",\n      \"imagenUrl\": \"\"\n    },\n    {\n      \"texto\": \"\",\n      \"imagenUrl\": \"\"\n    }\n  ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -282,7 +382,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"descripcion\": \"\"\n}",
+					"raw": "{\n  \"nombre\": \"Nuevo nombre de la figura\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

@@ -1,0 +1,698 @@
+[{
+  "_id": {
+    "$oid": "6b017cb232f922ac11dfbc86"
+  },
+  "nombre": "Seahorse",
+  "nivel": "intermedio",
+  "pasos": [
+    {
+      "texto": "Desde una inversión estable, engancha la corva de la pierna exterior a la barra.",
+      "imagenUrl": "/imagenes/seahorse/seahorse-paso1.png",
+      "_id": {
+        "$oid": "6b0825b8f3a8c5b6c5ff7941"
+      }
+    },
+    {
+      "texto": "Mantén la pierna enganchada y sujeta la barra con ambas manos. Baja la pierna libre de forma controlada.",
+      "imagenUrl": "/imagenes/seahorse/seahorse-paso2.png",
+      "_id": {
+        "$oid": "6b0825b8f3a8c5b6c5ff7942"
+      }
+    },
+    {
+      "texto": "Flexiona la pierna que has bajado y acércala a la barra para preparar el cambio de apoyo, manteniendo firmes los agarres.",
+      "imagenUrl": "/imagenes/seahorse/seahorse-paso3.png",
+      "_id": {
+        "$oid": "6b0825b8f3a8c5b6c5ff7943"
+      }
+    },
+    {
+      "texto": "Sujeta la barra con ambas manos por encima de la cabeza y recoloca el cuerpo mientras mantienes las piernas flexionadas y los apoyos controlados.",
+      "imagenUrl": "/imagenes/seahorse/seahorse-paso4.png",
+      "_id": {
+        "$oid": "6b0825b8f3a8c5b6c5ff7944"
+      }
+    },
+    {
+      "texto": "Reorienta la mano superior y, con los apoyos firmes, arquea ligeramente la espalda para dibujar la forma de caballito de mar.",
+      "imagenUrl": "/imagenes/seahorse/seahorse-paso5.png",
+      "_id": {
+        "$oid": "6b0825b8f3a8c5b6c5ff7945"
+      }
+    },
+    {
+      "texto": "Para salir, sujeta la barra con ambas manos por encima de la cabeza. Deshaz el cruce de las piernas, extiende una hacia un lado y baja la otra de forma controlada hasta apoyar el pie en el suelo.",
+      "imagenUrl": "/imagenes/seahorse/seahorse-paso6.png",
+      "_id": {
+        "$oid": "6b0825b8f3a8c5b6c5ff7946"
+      }
+    }
+  ],
+  "__v": 0,
+  "descripcion": "Figura en la que se cruzan las piernas alrededor de la barra y se arquea suavemente la espalda, creando una silueta que recuerda a un caballito de mar.",
+  "imagenUrl": "/imagenes/seahorse/seahorse-paso5.png"
+},
+{
+  "_id": {
+    "$oid": "6b04201231f9f254ac1a1535"
+  },
+  "nombre": "Fireman Spin",
+  "nivel": "principiante",
+  "pasos": [
+    {
+      "_id": {
+        "$oid": "6b04201231f9f254ac1a1536"
+      },
+      "texto": "Colócate de lado junto a la barra. Agárrala con la mano interior por encima de la cabeza y con la otra a la altura del pecho. Mantén los hombros activos, lejos de las orejas."
+    },
+    {
+      "_id": {
+        "$oid": "6b0432cf9e7a68d769305706"
+      },
+      "texto": "Da un paso hacia delante con el pie interior. Dibuja un arco amplio con la pierna exterior para iniciar el giro."
+    },
+    {
+      "_id": {
+        "$oid": "6b0432cf9e7a68d769305707"
+      },
+      "texto": "Flexiona la pierna exterior y rodea la barra con el tobillo. Con las manos firmes, recoge el pie interior y apóyalo por detrás de la barra. Acerca las rodillas para completar el giro."
+    },
+    {
+      "_id": {
+        "$oid": "6b0432cf9e7a68d769305708"
+      },
+      "texto": "Para terminar, apoya los pies en el suelo y recupera el equilibrio antes de soltar las manos."
+    }
+  ],
+  "__v": 0,
+  "descripcion": "Giro en el que se flexionan las piernas y se sujetan los tobillos alrededor de la barra.",
+  "imagenUrl": "/imagenes/fireman-spin/fireman-spin.png"
+},
+{
+  "_id": {
+    "$oid": "6b042d8d31f9f254ac1a153b"
+  },
+  "nombre": "Tabletop Tuck",
+  "nivel": "principiante",
+  "pasos": [
+    {
+      "texto": "Colócate de lado junto a la barra, con los pies en el suelo. Rodea la barra con el brazo más cercano al cuerpo de la barra y agárrala con esa mano.",
+      "imagenUrl": "/imagenes/tabletop-tuck/tabletop-tuck-paso1.png",
+      "_id": {
+        "$oid": "6b042d8d31f9f254ac1a153c"
+      }
+    },
+    {
+      "texto": "Pasa el otro brazo por detrás de la cintura y agarra la barra con el pulgar hacia arriba.",
+      "imagenUrl": "/imagenes/tabletop-tuck/tabletop-tuck-paso2.png",
+      "_id": {
+        "$oid": "6b042d8d31f9f254ac1a153d"
+      }
+    },
+    {
+      "texto": "Con el agarre estable, empuja la barra con la mano de atrás y mantén activo el brazo que la rodea. Recoge las rodillas hacia el pecho de forma controlada.",
+      "imagenUrl": "/imagenes/tabletop-tuck/tabletop-tuck-paso3.png",
+      "_id": {
+        "$oid": "6b042d8d31f9f254ac1a153e"
+      }
+    },
+    {
+      "texto": "Para salir, baja los pies al suelo suavemente y recupera el apoyo antes de soltar la barra.",
+      "imagenUrl": "/imagenes/tabletop-tuck/tabletop-tuck-paso4.png",
+      "_id": {
+        "$oid": "6b042d8d31f9f254ac1a153f"
+      }
+    }
+  ],
+  "__v": 0,
+  "imagenUrl": "/imagenes/tabletop-tuck/tabletop-tuck-paso3.png",
+  "descripcion": "Figura en la que se sujeta la barra con ambos brazos mientras se elevan las rodillas hacia el pecho."
+},
+{
+  "_id": {
+    "$oid": "6b081aeff3a8c5b6c5ff7936"
+  },
+  "nombre": "Chair Spin",
+  "nivel": "principiante",
+  "pasos": [
+    {
+      "texto": "Colócate de lado junto a la barra y sujétala con la mano que está más cerca de la barra, arriba y la otra colócala más abajo.",
+      "imagenUrl": "/imagenes/chair-spin/chair-spin-paso1.png",
+      "_id": {
+        "$oid": "6b081aeff3a8c5b6c5ff7937"
+      }
+    },
+    {
+      "texto": "Da un paso con el pie interior y dibuja un arco con la pierna exterior para iniciar el giro.",
+      "imagenUrl": "/imagenes/chair-spin/chair-spin-paso2.png",
+      "_id": {
+        "$oid": "6b081aeff3a8c5b6c5ff7938"
+      }
+    },
+    {
+      "texto": "Eleva los pies y flexiona las rodillas, formando una posición similar a estar sentada.",
+      "imagenUrl": "/imagenes/chair-spin/chair-spin-paso3.png",
+      "_id": {
+        "$oid": "6b081aeff3a8c5b6c5ff7939"
+      }
+    },
+    {
+      "texto": "Termina el giro apoyando los pies en el suelo de forma controlada.",
+      "imagenUrl": "/imagenes/chair-spin/chair-spin-paso4.png",
+      "_id": {
+        "$oid": "6b081aeff3a8c5b6c5ff793a"
+      }
+    }
+  ],
+  "descripcion": "Giro en el que las piernas se recogen como si estuvieras sentada.",
+  "imagenUrl": "/imagenes/chair-spin/chair-spin-paso3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b09463b76fec46024c13bfe"
+  },
+  "nombre": "Front Hook Spin",
+  "nivel": "principiante",
+  "descripcion": "Giro en el que la pierna interior se engancha por delante de la barra.",
+  "imagenUrl": "/imagenes/front-hook-spin.png",
+  "pasos": [
+    {
+      "texto": "Colócate junto a la barra y prepárate para iniciar el giro.",
+      "imagenUrl": "/imagenes/front-hook-spin-paso1.png",
+      "_id": {
+        "$oid": "6b09463b76fec46024c13bff"
+      }
+    },
+    {
+      "texto": "Durante el giro, flexiona la pierna interior y engánchala a la barra.",
+      "imagenUrl": "/imagenes/front-hook-spin-paso2.png",
+      "_id": {
+        "$oid": "6b09463b76fec46024c13c00"
+      }
+    },
+    {
+      "texto": "Desciende de forma controlada hasta recuperar el apoyo en el suelo.",
+      "imagenUrl": "/imagenes/front-hook-spin-paso3.png",
+      "_id": {
+        "$oid": "6b09463b76fec46024c13c01"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b094c5976fec46024c13c41"
+  },
+  "nombre": "Back Hook Spin",
+  "nivel": "principiante",
+  "descripcion": "Giro en el que la pierna exterior se flexiona y se engancha a la barra por detrás.",
+  "imagenUrl": "/imagenes/back-hook-spin.png",
+  "pasos": [
+    {
+      "texto": "Colócate junto a la barra y prepárate para iniciar el giro.",
+      "imagenUrl": "/imagenes/back-hook-spin-paso1.png",
+      "_id": {
+        "$oid": "6b094c5976fec46024c13c42"
+      }
+    },
+    {
+      "texto": "Durante el giro, flexiona la pierna exterior y busca el enganche por detrás de la barra.",
+      "imagenUrl": "/imagenes/back-hook-spin-paso2.png",
+      "_id": {
+        "$oid": "6b094c5976fec46024c13c43"
+      }
+    },
+    {
+      "texto": "Desciende de forma controlada hasta recuperar el apoyo en el suelo.",
+      "imagenUrl": "/imagenes/back-hook-spin-paso3.png",
+      "_id": {
+        "$oid": "6b094c5976fec46024c13c44"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b094cf576fec46024c13c5d"
+  },
+  "nombre": "Jasmine",
+  "nivel": "intermedio",
+  "descripcion": "Figura en la que el cuerpo se sostiene junto a la barra con las piernas flexionadas.",
+  "imagenUrl": "/imagenes/jasmine.png",
+  "pasos": [
+    {
+      "texto": "Prepara los agarres de manos y piernas necesarios para entrar en la figura.",
+      "imagenUrl": "/imagenes/jasmine-paso1.png",
+      "_id": {
+        "$oid": "6b094cf576fec46024c13c5e"
+      }
+    },
+    {
+      "texto": "Coloca las piernas flexionadas alrededor de la barra hasta alcanzar la posición.",
+      "imagenUrl": "/imagenes/jasmine-paso2.png",
+      "_id": {
+        "$oid": "6b094cf576fec46024c13c5f"
+      }
+    },
+    {
+      "texto": "Recupera una posición estable antes de descender.",
+      "imagenUrl": "/imagenes/jasmine-paso3.png",
+      "_id": {
+        "$oid": "6b094cf576fec46024c13c60"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b094d6176fec46024c13c61"
+  },
+  "nombre": "Teddy",
+  "nivel": "intermedio",
+  "descripcion": "Figura suspendida junto a la barra con las piernas flexionadas y el cuerpo inclinado.",
+  "imagenUrl": "/imagenes/teddy.png",
+  "pasos": [
+    {
+      "texto": "Desde una posición estable, prepara los puntos de contacto con la barra.",
+      "imagenUrl": "/imagenes/teddy-paso1.png",
+      "_id": {
+        "$oid": "6b094d6176fec46024c13c62"
+      }
+    },
+    {
+      "texto": "Flexiona las piernas y coloca el cuerpo en la posición de Teddy.",
+      "imagenUrl": "/imagenes/teddy-paso2.png",
+      "_id": {
+        "$oid": "6b094d6176fec46024c13c63"
+      }
+    },
+    {
+      "texto": "Recupera los agarres necesarios antes de salir y descender.",
+      "imagenUrl": "/imagenes/teddy-paso3.png",
+      "_id": {
+        "$oid": "6b094d6176fec46024c13c64"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b094dbd76fec46024c13c71"
+  },
+  "nombre": "Scissor Sit",
+  "nivel": "intermedio",
+  "descripcion": "Figura sentada en la barra en la que las piernas forman una posición de tijera.",
+  "imagenUrl": "/imagenes/scissor-sit.png",
+  "pasos": [
+    {
+      "texto": "Desde una posición sentada estable, prepara los agarres.",
+      "imagenUrl": "/imagenes/scissor-sit-paso1.png",
+      "_id": {
+        "$oid": "6b094dbd76fec46024c13c72"
+      }
+    },
+    {
+      "texto": "Coloca las piernas en la posición de tijera correspondiente a la variante que practicas.",
+      "imagenUrl": "/imagenes/scissor-sit-paso2.png",
+      "_id": {
+        "$oid": "6b094dbd76fec46024c13c73"
+      }
+    },
+    {
+      "texto": "Vuelve a una posición estable antes de descender.",
+      "imagenUrl": "/imagenes/scissor-sit-paso3.png",
+      "_id": {
+        "$oid": "6b094dbd76fec46024c13c74"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b094dee76fec46024c13c84"
+  },
+  "nombre": "Brass Monkey",
+  "nivel": "intermedio",
+  "descripcion": "Figura invertida que utiliza el contacto de las piernas y el cuerpo con la barra.",
+  "imagenUrl": "/imagenes/brass-monkey.png",
+  "pasos": [
+    {
+      "texto": "Prepara una entrada adecuada a la variante de Brass Monkey que practicas.",
+      "imagenUrl": "/imagenes/brass-monkey-paso1.png",
+      "_id": {
+        "$oid": "6b094dee76fec46024c13c85"
+      }
+    },
+    {
+      "texto": "Asegura los puntos de contacto antes de colocar el cuerpo en la figura.",
+      "imagenUrl": "/imagenes/brass-monkey-paso2.png",
+      "_id": {
+        "$oid": "6b094dee76fec46024c13c86"
+      }
+    },
+    {
+      "texto": "Recupera una posición estable antes de salir y descender.",
+      "imagenUrl": "/imagenes/brass-monkey-paso3.png",
+      "_id": {
+        "$oid": "6b094dee76fec46024c13c87"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b094f0a76fec46024c13c88"
+  },
+  "nombre": "Ayesha con agarre de codo",
+  "nivel": "avanzado",
+  "descripcion": "Figura invertida y suspendida que utiliza un agarre de codo para sostener el cuerpo junto a la barra.",
+  "imagenUrl": "/imagenes/ayesha-agarre-codo.png",
+  "pasos": [
+    {
+      "texto": "Pendiente de completar la entrada a la figura.",
+      "imagenUrl": "/imagenes/ayesha-agarre-codo-paso1.png",
+      "_id": {
+        "$oid": "6b094f0a76fec46024c13c89"
+      }
+    },
+    {
+      "texto": "Pendiente de describir los agarres y la posición final.",
+      "imagenUrl": "/imagenes/ayesha-agarre-codo-paso2.png",
+      "_id": {
+        "$oid": "6b094f0a76fec46024c13c8a"
+      }
+    },
+    {
+      "texto": "Pendiente de completar la salida controlada.",
+      "imagenUrl": "/imagenes/ayesha-agarre-codo-paso3.png",
+      "_id": {
+        "$oid": "6b094f0a76fec46024c13c8b"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b094f5076fec46024c13c8c"
+  },
+  "nombre": "Jade Split",
+  "nivel": "avanzado",
+  "descripcion": "Figura invertida de flexibilidad en la que las piernas se abren en split junto a la barra.",
+  "imagenUrl": "/imagenes/jade-split.png",
+  "pasos": [
+    {
+      "texto": "Pendiente de completar la entrada a la figura.",
+      "imagenUrl": "/imagenes/jade-split-paso1.png",
+      "_id": {
+        "$oid": "6b094f5076fec46024c13c8d"
+      }
+    },
+    {
+      "texto": "Pendiente de describir los agarres y la posición de las piernas.",
+      "imagenUrl": "/imagenes/jade-split-paso2.png",
+      "_id": {
+        "$oid": "6b094f5076fec46024c13c8e"
+      }
+    },
+    {
+      "texto": "Pendiente de completar la salida controlada.",
+      "imagenUrl": "/imagenes/jade-split-paso3.png",
+      "_id": {
+        "$oid": "6b094f5076fec46024c13c8f"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b094f7f76fec46024c13c96"
+  },
+  "nombre": "Extended Butterfly",
+  "nivel": "avanzado",
+  "descripcion": "Figura invertida en la que el cuerpo se extiende junto a la barra, con una pierna apoyada en ella.",
+  "imagenUrl": "/imagenes/extended-butterfly.png",
+  "pasos": [
+    {
+      "texto": "Pendiente de completar la entrada a la figura.",
+      "imagenUrl": "/imagenes/extended-butterfly-paso1.png",
+      "_id": {
+        "$oid": "6b094f7f76fec46024c13c97"
+      }
+    },
+    {
+      "texto": "Pendiente de describir los agarres y la posición final.",
+      "imagenUrl": "/imagenes/extended-butterfly-paso2.png",
+      "_id": {
+        "$oid": "6b094f7f76fec46024c13c98"
+      }
+    },
+    {
+      "texto": "Pendiente de completar la salida controlada.",
+      "imagenUrl": "/imagenes/extended-butterfly-paso3.png",
+      "_id": {
+        "$oid": "6b094f7f76fec46024c13c99"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b094fa276fec46024c13c9a"
+  },
+  "nombre": "Shoulder Mount",
+  "nivel": "avanzado",
+  "descripcion": "Subida invertida en la que el hombro se coloca junto a la barra.",
+  "imagenUrl": "/imagenes/shoulder-mount.png",
+  "pasos": [
+    {
+      "texto": "Pendiente de describir la colocación inicial y los agarres.",
+      "imagenUrl": "/imagenes/shoulder-mount-paso1.png",
+      "_id": {
+        "$oid": "6b094fa276fec46024c13c9b"
+      }
+    },
+    {
+      "texto": "Pendiente de describir la subida a la posición invertida.",
+      "imagenUrl": "/imagenes/shoulder-mount-paso2.png",
+      "_id": {
+        "$oid": "6b094fa276fec46024c13c9c"
+      }
+    },
+    {
+      "texto": "Pendiente de completar la salida controlada.",
+      "imagenUrl": "/imagenes/shoulder-mount-paso3.png",
+      "_id": {
+        "$oid": "6b094fa276fec46024c13c9d"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b094fc776fec46024c13c9e"
+  },
+  "nombre": "Anastasia",
+  "nivel": "avanzado",
+  "descripcion": "Figura de pole dance avanzada que combina agarre, equilibrio y flexibilidad.",
+  "imagenUrl": "/imagenes/anastasia.png",
+  "pasos": [
+    {
+      "texto": "Pendiente de completar la entrada a la figura.",
+      "imagenUrl": "/imagenes/anastasia-paso1.png",
+      "_id": {
+        "$oid": "6b094fc776fec46024c13c9f"
+      }
+    },
+    {
+      "texto": "Pendiente de describir los agarres y la posición final.",
+      "imagenUrl": "/imagenes/anastasia-paso2.png",
+      "_id": {
+        "$oid": "6b094fc776fec46024c13ca0"
+      }
+    },
+    {
+      "texto": "Pendiente de completar la salida controlada.",
+      "imagenUrl": "/imagenes/anastasia-paso3.png",
+      "_id": {
+        "$oid": "6b094fc776fec46024c13ca1"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b09522e76fec46024c13cb1"
+  },
+  "nombre": "Allegra Oversplit",
+  "nivel": "élite",
+  "descripcion": "Variación de Allegra que incorpora una apertura de piernas superior a un split.",
+  "imagenUrl": "/imagenes/allegra-oversplit.png",
+  "pasos": [
+    {
+      "texto": "Pendiente de completar la entrada a la figura.",
+      "imagenUrl": "/imagenes/allegra-oversplit-paso1.png",
+      "_id": {
+        "$oid": "6b09522e76fec46024c13cb2"
+      }
+    },
+    {
+      "texto": "Pendiente de describir los agarres y la posición final.",
+      "imagenUrl": "/imagenes/allegra-oversplit-paso2.png",
+      "_id": {
+        "$oid": "6b09522e76fec46024c13cb3"
+      }
+    },
+    {
+      "texto": "Pendiente de completar la salida controlada.",
+      "imagenUrl": "/imagenes/allegra-oversplit-paso3.png",
+      "_id": {
+        "$oid": "6b09522e76fec46024c13cb4"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b09536776fec46024c13cb5"
+  },
+  "nombre": "Aerial Shoulder Mount",
+  "nivel": "élite",
+  "descripcion": "Variación aérea de Shoulder Mount que se realiza desde una posición elevada en la barra.",
+  "imagenUrl": "/imagenes/aerial-shoulder-mount.png",
+  "pasos": [
+    {
+      "texto": "Pendiente de describir la posición inicial y los agarres.",
+      "imagenUrl": "/imagenes/aerial-shoulder-mount-paso1.png",
+      "_id": {
+        "$oid": "6b09536776fec46024c13cb6"
+      }
+    },
+    {
+      "texto": "Pendiente de describir la entrada a la posición invertida.",
+      "imagenUrl": "/imagenes/aerial-shoulder-mount-paso2.png",
+      "_id": {
+        "$oid": "6b09536776fec46024c13cb7"
+      }
+    },
+    {
+      "texto": "Pendiente de completar la salida controlada.",
+      "imagenUrl": "/imagenes/aerial-shoulder-mount-paso3.png",
+      "_id": {
+        "$oid": "6b09536776fec46024c13cb8"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b09542b76fec46024c13cbf"
+  },
+  "nombre": "Agata",
+  "nivel": "élite",
+  "descripcion": "Figura avanzada de pole dance que combina fuerza y flexibilidad.",
+  "imagenUrl": "/imagenes/agata.png",
+  "pasos": [
+    {
+      "texto": "Pendiente de completar la entrada a la figura.",
+      "imagenUrl": "/imagenes/agata-paso1.png",
+      "_id": {
+        "$oid": "6b09542b76fec46024c13cc0"
+      }
+    },
+    {
+      "texto": "Pendiente de describir los agarres y la posición final.",
+      "imagenUrl": "/imagenes/agata-paso2.png",
+      "_id": {
+        "$oid": "6b09542b76fec46024c13cc1"
+      }
+    },
+    {
+      "texto": "Pendiente de completar la salida controlada.",
+      "imagenUrl": "/imagenes/agata-paso3.png",
+      "_id": {
+        "$oid": "6b09542b76fec46024c13cc2"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b09545c76fec46024c13ccc"
+  },
+  "nombre": "Russian Split Sideways",
+  "nivel": "élite",
+  "descripcion": "Variación lateral de Russian Split que combina flexibilidad y agarre en la barra.",
+  "imagenUrl": "/imagenes/russian-split-sideways.png",
+  "pasos": [
+    {
+      "texto": "Pendiente de completar la entrada a la figura.",
+      "imagenUrl": "/imagenes/russian-split-sideways-paso1.png",
+      "_id": {
+        "$oid": "6b09545c76fec46024c13ccd"
+      }
+    },
+    {
+      "texto": "Pendiente de describir los agarres y la posición final.",
+      "imagenUrl": "/imagenes/russian-split-sideways-paso2.png",
+      "_id": {
+        "$oid": "6b09545c76fec46024c13cce"
+      }
+    },
+    {
+      "texto": "Pendiente de completar la salida controlada.",
+      "imagenUrl": "/imagenes/russian-split-sideways-paso3.png",
+      "_id": {
+        "$oid": "6b09545c76fec46024c13ccf"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6b09548f76fec46024c13cdc"
+  },
+  "nombre": "Ayesha Double Forearm",
+  "nivel": "élite",
+  "descripcion": "Variación de Ayesha que utiliza ambos antebrazos en el agarre de la barra.",
+  "imagenUrl": "/imagenes/ayesha-double-forearm.png",
+  "pasos": [
+    {
+      "texto": "Pendiente de completar la entrada a la figura.",
+      "imagenUrl": "/imagenes/ayesha-double-forearm-paso1.png",
+      "_id": {
+        "$oid": "6b09548f76fec46024c13cdd"
+      }
+    },
+    {
+      "texto": "Pendiente de describir los agarres y la posición final.",
+      "imagenUrl": "/imagenes/ayesha-double-forearm-paso2.png",
+      "_id": {
+        "$oid": "6b09548f76fec46024c13cde"
+      }
+    },
+    {
+      "texto": "Pendiente de completar la salida controlada.",
+      "imagenUrl": "/imagenes/ayesha-double-forearm-paso3.png",
+      "_id": {
+        "$oid": "6b09548f76fec46024c13cdf"
+      }
+    }
+  ],
+  "__v": 0
+}]
